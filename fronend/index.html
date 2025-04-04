@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Testimonials</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- <header>
+        <marquee behavior="scroll" direction="left">For support, contact us on WhatsApp: 📱 0507363607</marquee>
+    </header> -->
+
+    <div class="container">
+        <h1>Join The Movement! Leave a review</h1>
+
+        <p>Thank you for choosing <strong>Techplug Computers</strong> for your laptop needs. If you have any questions
+            or need assistance with your purchase, please don’t hesitate to reach out. We're here to help and ensure
+            you're completely satisfied with your new product.</p>
+
+        <form id="testimonialForm">
+            <label for="name">Customer Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="number">Phone Number (Optional):</label>
+            <input type="text" id="number" name="number">
+
+            <label for="product">Product Purchased:</label>
+            <input type="text" id="product" name="product" required>
+
+            <label for="review">Review:</label>
+            <textarea id="review" name="review" rows="4" required></textarea>
+
+            <!-- Rating Section (Dropdown) -->
+            <label for="rating">Rating (2, 4, 6, 8, 10):</label>
+            <select id="rating" name="rating" required>
+                <option value="">Select Rating</option>
+                <option value="2">2</option>
+                <option value="4">4</option>
+                <option value="6">6</option>
+                <option value="8">8</option>
+                <option value="10">10</option>
+            </select>
+
+            <button type="submit">Submit Review</button>
+        </form>
+
+        <h2>Customer Reviews</h2>
+        <div id="testimonialsContainer"></div>
+
+    
+        <div id="paginationControls" class="pagination-controls">
+            <!-- Pagination will be added here dynamically -->
+        </div>
+    </div>
+
+    <!-- Popup Notification -->
+    <div id="popupNotification" class="popup">
+        <p class="popup-p">✅ SUBMITTED.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
