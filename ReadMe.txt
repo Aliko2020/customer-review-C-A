@@ -34,7 +34,7 @@ First, clone the repository to your local machine:
 
 bash
 Copy
-git clone https://github.com/your-username/customer-testimonials.git
+https://github.com/Aliko2020/customer-review-C-A.git
 cd customer-testimonials
 2. Open the Website Locally
 You can open the index.html file directly in your web browser to view the website locally:
