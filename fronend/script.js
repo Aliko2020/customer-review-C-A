@@ -4,21 +4,18 @@ let currentPage = 1;
 
 const displayReviews = async () => {
     const testimonialsContainer = document.getElementById("testimonialsContainer");
-    testimonialsContainer.innerHTML = ""; // Clear the container before displaying new reviews
+    testimonialsContainer.innerHTML = ""; 
 
     try {
-        // Fetch reviews from the backend
-        const response = await fetch('http://localhost:5000/reviews');
+        const response = await fetch('https://customer-review-backend.onrender.com/reviews');
         const data = await response.json();
 
-        // Push reviews to the local reviews array
         reviews.push(...data);
 
         const start = (currentPage - 1) * reviewsPerPage;
         const end = start + reviewsPerPage;
         const reviewsToShow = reviews.slice(start, end);
 
-        // Display reviews
         reviewsToShow.forEach(review => {
             const testimonialHTML = `
                 <div class="testimonial">
@@ -43,14 +40,12 @@ const displayPagination = () => {
     const paginationControls = document.getElementById("paginationControls");
     const totalPages = Math.ceil(reviews.length / reviewsPerPage);
 
-    paginationControls.innerHTML = ""; // Clear any existing pagination
+    paginationControls.innerHTML = ""; 
 
-    // Create Previous button
     if (currentPage > 1) {
         paginationControls.innerHTML += `<button onclick="changePage(${currentPage - 1})">Previous</button>`;
     }
 
-    // Create Next button
     if (currentPage < totalPages) {
         paginationControls.innerHTML += `<button onclick="changePage(${currentPage + 1})">Next</button>`;
     }
@@ -65,23 +60,23 @@ const changePage = (page) => {
 
 // Initialize page
 window.onload = () => {
-    displayReviews(); // Display the reviews when the page loads
+    displayReviews(); 
     document.getElementById('testimonialForm').addEventListener('submit', handleReviewSubmit);
 };
 
-// Show the popup notification
+
 const showPopup = () => {
     const popup = document.getElementById("popupNotification");
     popup.style.display = "block";
 };
 
-// Close the popup notification
+
 const closePopup = () => {
     const popup = document.getElementById("popupNotification");
     popup.style.display = "none";
 };
 
-// Handle review submission
+
 const handleReviewSubmit = async (event) => {
     event.preventDefault();
 
@@ -90,7 +85,7 @@ const handleReviewSubmit = async (event) => {
         number: document.getElementById("number").value,
         product: document.getElementById("product").value,
         review: document.getElementById("review").value,
-        rating: document.getElementById("rating").value, // Get selected rating
+        rating: document.getElementById("rating").value, 
     };
 
     if (!reviewData.rating) {
@@ -99,7 +94,7 @@ const handleReviewSubmit = async (event) => {
     }
 
     try {
-        const response = await fetch('http://localhost:5000/reviews', {
+        const response = await fetch('https://customer-review-backend.onrender.com/reviews', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
