@@ -1,7 +1,5 @@
 Customer Testimonials Website
-This project allows customers to leave testimonials and reviews for products they've purchased. The website features a form for customers to submit their reviews, as well as a section displaying customer testimonials. The reviews are paginated and submitted to a backend server (though the backend part is not implemented here).
-
-The website also includes a popup notification that appears when a review is successfully submitted.
+This project allows customers to leave testimonials and reviews for products they've purchased. The website features a form for customers to submit their reviews, as well as a section displaying customer testimonials. The reviews are paginated and submitted to a backend server.
 
 Features
 Review Form: Users can submit their name, phone number (optional), the product they purchased, a review, and a rating.
