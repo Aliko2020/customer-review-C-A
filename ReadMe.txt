@@ -1,7 +1,5 @@
 Customer Testimonials Website
-This project allows customers to leave testimonials and reviews for products they've purchased. The website features a form for customers to submit their reviews, as well as a section displaying customer testimonials. The reviews are paginated and submitted to a backend server (though the backend part is not implemented here).
-
-The website also includes a popup notification that appears when a review is successfully submitted.
+This project allows customers to leave testimonials and reviews for products they've purchased. The website features a form for customers to submit their reviews, as well as a section displaying customer testimonials. The reviews are paginated and submitted to a backend server.
 
 Features
 Review Form: Users can submit their name, phone number (optional), the product they purchased, a review, and a rating.
@@ -34,7 +32,7 @@ First, clone the repository to your local machine:
 
 bash
 Copy
-git clone https://github.com/your-username/customer-testimonials.git
+https://github.com/Aliko2020/customer-review-C-A.git
 cd customer-testimonials
 2. Open the Website Locally
 You can open the index.html file directly in your web browser to view the website locally:
